@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.2.1.js"
-            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-            crossorigin="anonymous">
-    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous"
+    ></script>
     <script src="./scripts/game.js"></script>
-</head>
-<body onload="init()">
+  </head>
+  <body onload="init()">
+    <div class="story">welcome to mars</div>
     <div class="counters">
+      <div class="counter">
+        Air
+        <div class="air">0</div>
+      </div>
+      <div class="counter">
+        Power
+        <div class="power">0</div>
+      </div>
+      <div class="counter">
+        Nutrients
         <div class="nutrients">0</div>
+      </div>
     </div>
 
     <div class="cell">
-        <input type="button" name="clicker" value="absorb nutrients" />
+      <input type="button" name="nutrientsBtn" value="absorb nutrients" />
     </div>
-</body>
+    <div class="cell">
+      <input type="button" name="airBtn" value="harvest air" />
+    </div>
+    <div class="cell">
+      <input type="button" name="powerBtn" value="generate power" />
+    </div>
+  </body>
 </html>
