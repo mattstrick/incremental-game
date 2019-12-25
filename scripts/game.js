@@ -41,6 +41,14 @@ function init() {
   airBtn.on("click", function() {
     updateAmountOnClick("air");
   });
+
+  initializeAmounts(["nutrients", "power", "air"]);
+}
+
+function initializeAmounts(typesArray) {
+  typesArray.forEach(type => {
+    $(`.${type}`)[0].innerText = counters[type].amount;
+  });
 }
 
 function updateAmountOnClick(type) {
