@@ -25,6 +25,26 @@ var counters = {
     base_click: 1
   })
 };
+
+var martians = {}
+
+var items = {
+
+    1 = {
+        name: purifier,
+        base_click: 1,
+        type: "air"
+    }
+}
+
+var upgrades = {
+  air_click_upgrade_1: {
+    min_needed: 10,
+    base_multiplier: 2,
+    on: false
+  }
+};
+
 function init() {
   var nutrientsBtn = $("input[name=nutrientsBtn");
   var powerBtn = $("input[name=powerBtn");
@@ -43,7 +63,10 @@ function init() {
   });
 
   initializeAmounts(["nutrients", "power", "air"]);
+  initializeItems();
 }
+
+function initializeItems()
 
 function initializeAmounts(typesArray) {
   typesArray.forEach(type => {
